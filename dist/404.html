@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dealership App</title>
+  <script>
+    // This script handles client-side routing for the static deployment
+    (function() {
+      // Check if this is a direct navigation to a route that should be handled by React Router
+      const routes = ['/admin-login', '/admin', '/activity'];
+      const path = window.location.pathname;
+      
+      // If we're on a route that should be handled by React Router
+      if (routes.some(route => path.startsWith(route))) {
+        // Redirect to the root with a hash route
+        window.location.href = '/#' + path;
+      }
+    })();
+  </script>
+  <script type="module" crossorigin src="/assets/index-Bxo5D2l3.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CHKYkYyy.css">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
